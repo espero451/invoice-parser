@@ -1,4 +1,4 @@
-# Invoice Reader (Laravel)
+# Invoice Reader
 
 This app is made to read data from different invoices.
 
