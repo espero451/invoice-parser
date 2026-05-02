@@ -49,7 +49,7 @@ php artisan serve
 
 Open: `http://127.0.0.1:8000` -->
 
-## Quickstart (Docker only)
+## Quickstart
 
 1. Create local env file:
 
