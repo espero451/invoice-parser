@@ -49,7 +49,39 @@ php artisan serve
 
 Open: `http://127.0.0.1:8000` -->
 
-## Run with Docker
+## Quickstart (Docker only)
+
+1. Create local env file:
+
+```bash
+cp .env.example .env
+```
+
+2. Open `.env` and set your OpenAI API key:
+
+```env
+OPENAI_API_KEY=your_real_openai_api_key
+```
+
+3. Build and start containers:
+
+```bash
+docker compose up --build -d
+```
+
+4. Generate Laravel app key inside the app container:
+
+```bash
+docker compose exec app php artisan key:generate
+```
+
+5. Open the app:
+
+`http://127.0.0.1:8081`
+
+
+
+<!-- ## Run with Docker
 
 ```bash
 docker compose up --build -d
@@ -61,7 +93,7 @@ Stop:
 
 ```bash
 docker compose down
-```
+``` -->
 
 ## Tests
 
