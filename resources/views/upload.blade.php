@@ -182,8 +182,10 @@
 
         @isset($ocrText)
             <div class="card">
-                <h2>OCR Text</h2>
-                <pre>{{ $ocrText ?? 'No text extracted.' }}</pre>
+                <details>
+                    <summary>OCR Text</summary>
+                    <pre>{{ $ocrText ?? 'No text extracted.' }}</pre>
+                </details>
             </div>
         @endisset
 
