@@ -19,6 +19,7 @@ COPY composer.json composer.lock ./
 RUN composer install --no-interaction --prefer-dist --no-dev --optimize-autoloader --no-scripts
 
 COPY . .
+RUN rm -f bootstrap/cache/services.php bootstrap/cache/packages.php
 RUN composer dump-autoload --optimize --no-dev
 
 RUN chown -R www-data:www-data /var/www/html
